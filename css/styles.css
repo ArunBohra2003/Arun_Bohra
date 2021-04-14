@@ -1,0 +1,534 @@
+/* ------------------------------------- */
+/* BASIC RESET */
+/* ------------------------------------- */
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+html {
+     font-size: 62.5%;
+     scroll-behavior: smooth;
+}
+
+body {
+     box-sizing: inherit;
+     color: #777;
+     background-color: #E0E2DB;
+     font-family: 'Roboto', sans-serif;
+     font-size: 1.8rem;
+     font-weight: 400;
+     line-height: 1.5;
+     scroll-behavior: inherit;
+}
+
+.clearfix {zoom: 1;}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/* ------------------------------------- */
+/* THE REUSABLE CONTENT */
+/* ------------------------------------- */
+
+/* Grids */
+
+.row {
+     width: 80%;
+     margin: 0 auto;
+}
+
+.span-1-of-2 {
+     width: 48%;
+     float: left;
+}
+
+/* HTML contents */
+
+h1, h2.header-heading, h2, h3, h5 {
+     margin: 0;
+     text-transform: uppercase;
+}
+
+h1 {
+     font-size: 4.5rem;
+     color: #E0E2DB;
+     letter-spacing: .4rem;
+     word-spacing: .5rem;
+     font-weight: 300;
+}
+
+h2 {
+     font-size: 3.5rem;
+     color: #3D348B;
+     letter-spacing: .3rem;
+}
+
+h3 {
+     font-size: 2.6rem;
+     color: #000;
+}
+
+h4 {
+     font-size: 2.2rem;
+     color: #E0E2DB;
+}
+
+h5 {
+     font-size: 2rem;
+     margin-bottom: .5rem;
+     color: #191716;
+}
+
+/* Links */
+
+a {
+     text-decoration: none;
+     display: inline-block;
+}
+
+/* Icons */
+.icon-small {
+     font-size: 2rem;
+     color: #3D348B;
+     margin-right: 1rem;
+}
+
+/* Buttons */
+
+.btn {
+     border: 1px solid #E6AF2E;
+     border-radius: .3rem;
+     font-size: 1.6rem;
+     padding: 1.2rem 3.5rem;
+     text-transform: uppercase;
+     color: #E0E2DB;
+     background-color: transparent;
+     font-weight: bold;
+     letter-spacing: .3rem;
+     transition: all .3s;
+}
+
+.btn:hover {
+     background-color: #E6AF2E;
+     color: #191716;
+}
+
+.btn2 {
+     background-color: #3D348B;
+     color: #E0E2DB;
+     border: 1px solid #3D348B;
+     border-radius: .3rem;
+     font-size: 1.6rem;
+     padding: 1.2rem 3.5rem;
+     text-transform: uppercase;
+     font-weight: bold;
+     letter-spacing: .3rem;
+     transition: all .3s;
+}
+
+.btn2:hover {
+     background-color: #E0E2DB;
+     color: #191716;
+}
+
+/* Utility classes */
+
+.u-margin-top-small {
+     margin-top: 2.5rem;
+}
+
+.u-margin-top-medium {
+     margin-top: 5rem;
+}
+
+.u-margin-top-big {
+     margin-top: 7.5rem;
+}
+
+.u-margin-bottom-small {
+     margin-bottom: 2rem;
+}
+
+.u-margin-bottom-medium {
+     margin-bottom: 4rem;
+}
+
+.u-text-align-center {
+     text-align: center;
+}
+
+.u-inline-block {
+     display: inline-block;
+}
+
+/* ------------------------------------- */
+/* THE HEADER SECTION */
+/* ------------------------------------- */
+
+header {
+     background-color: #3D348B;
+     height: 100vh;
+}
+
+.hero-text-box {
+     position: absolute;
+     top: 45%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+}
+
+h2.header-heading {
+     font-size: 3.5rem;
+     margin-top: 2rem;
+     color: #E6AF2E;
+     font-weight: 400;
+}
+
+h2.slogan {
+     color: #E6AF2E;
+     font-size: 2.8rem;
+     font-weight: 400;
+}
+
+/* ------------------------------------- */
+/* THE NAVBAR */
+/* ------------------------------------- */
+
+.navigation {
+     position: relative;
+     border-bottom: .5px solid #777;
+     transition: all .5s;
+}
+
+.logo-box {
+     float: left;
+}
+
+.logo img {
+     width: 6rem;
+     height: auto;
+     margin-left: 2rem;
+     border-radius: 50%;
+}
+
+nav {
+     padding: .5rem;
+}
+
+.navbar {
+     float: right;
+     list-style: none;
+     margin-right: 10rem;
+     margin-top: 1.5rem;
+}
+
+.navbar li {
+     display: inline-block;
+}
+
+.navbar li a {
+     margin: 0 1rem;
+     padding: .2rem .6rem;
+     color: black;
+     text-transform: uppercase;
+     border-bottom: 2px solid transparent;
+     transition: all .3s;
+}
+
+.navbar li a:hover {
+     border-bottom: 2px solid #E6AF2E;
+     transition: all .3s;
+}
+
+/* The sticky navbar */
+
+.sticky {
+     position: fixed;
+     background-color: #3D348B;
+     top: 0;
+     width: 100%;
+     box-shadow: 0 .2rem .3rem rgba(0, 0, 0, .5);
+}
+
+.sticky .navbar-lists {
+     color: #E0E2DB;
+}
+
+.sticky .logo {
+     color: #E0E2DB;
+}
+
+
+/* ------------------------------------- */
+section {
+     padding: 8rem;
+}
+/* ------------------------------------- */
+
+/* ------------------------------------- */
+/* THE ABOUT SECTION */
+/* ------------------------------------- */
+
+.about-section {
+     padding: 0;
+     margin-top: 12rem;
+}
+
+.long-text {
+     width: 70%;
+     margin: 2.5rem auto 0;
+}
+
+.profile-image {
+     height: 35rem;
+     width: auto;
+}
+
+.my-info-img {
+     text-align: right;
+     padding-right: 15rem;
+}
+
+.my-info-list {
+     list-style: none;
+}
+
+.my-info-list > li {
+     margin-bottom: 1.2rem;
+}
+
+/* ------------------------------------- */
+/* MY SKILLS SECTION */
+/* ------------------------------------- */
+
+.my-skills {
+     background-color: #3D348B;
+}
+
+.skill-div {
+     width: 24%;
+     padding: 1%;
+}
+
+.skill-div i {
+     font-size: 8rem;
+     margin-top: 3rem;
+}
+
+.circle {
+     width: 14rem;
+     height: 14rem;
+     border: 2px solid #E0E2DB;
+     border-radius: 50%;
+}
+
+.design-skill {
+     color: #BA5F79;
+}
+
+.html-skill {
+     color: #f16529;
+}
+
+.css-skill {
+     color: #2965f1;
+}
+
+.js-skill {
+     color: #f7df1e;
+}
+
+/* ------------------------------------- */
+/* MY PROJECTS SECTION */
+/* ------------------------------------- */
+
+.projects-section {
+     padding: 8rem 0 2rem;
+}
+
+.button-container {
+     text-align: center;
+}
+
+.button-container button {
+     padding: 1.2rem 3.5rem;
+     border: 1px solid #3D348B;
+     outline: none;
+     cursor: pointer;
+     border-radius: 10px;
+     margin: 0 3rem;
+     transition: all .3s;
+}
+
+.tab-panel {
+     width: 100%;
+     overflow: hidden;
+     visibility: none;
+     transition: all .5s;
+}
+
+.img-container {
+     width: 49%;
+     border-radius: 5px;
+     padding: 2%;
+}
+
+.img-container img {
+     width: 100%;
+     height: auto;
+}
+
+.all-projects {
+     font-size: 1.5rem;
+     padding: .8rem;
+     padding-left: 1.6rem;
+}
+
+/* ------------------------------------- */
+/* THE FOOTER SECTION */
+/* ------------------------------------- */
+
+footer {
+     padding: 8rem;
+     padding-bottom: 0;
+     background-color: #BEB7A4;
+     color: #191716;
+}
+
+.info-div {
+     width: 30%;
+     float: left;
+}
+
+.details {
+     margin-bottom: 3rem;
+}
+
+.details p {
+     font-size: 1.6rem;
+}
+
+.social-icons a {
+     color: #E0E2DB;
+     transition: color .3s;
+}
+
+.social-icons i {
+     font-size: 2.5rem;
+     margin: 0 1rem;
+}
+
+.facebook:hover {
+     color: #3b5999;
+}
+
+.twitter:hover {
+     color: #55acee;
+}
+
+.pinterest:hover {
+     color: #bd081c;
+}
+
+.instagram:hover {
+     color: #e4405f;
+}
+
+.contact-div {
+     width: 70%;
+     font-weight: 300;
+     padding-left: 5%;
+}
+
+.inputs input {
+     width: 80%;
+     padding: 1rem 3.5rem;
+     background-color: transparent;
+     border: 1px solid #191716;
+     margin-bottom: 3rem;
+     border-radius: 50px;
+     outline: none;
+     color: #191716;
+}
+
+.inputs input::placeholder {
+     color: #191716;
+}
+
+.message textarea {
+     background-color: transparent;
+     outline: none;
+     color: #191716;
+     padding: 1.2rem;
+     width: 85%;
+     max-width: 100%;
+}
+
+.copy-section {
+     padding: 4rem;
+     background-color: #BEB7A4;
+}
+
+.copy-text {
+     font-size: 1.5rem;
+     margin: 2rem;
+     color: #323232;
+}
+
+/* ------------------------------------- */
+/* THE POPUPS SECTION */
+/* ------------------------------------- */
+
+.popup {
+     height: 100vh;
+     width: 100%;
+     position: fixed;
+     top: 0;
+     left: 0;
+     background-color: rgba(0, 0, 0, 0.8);
+     z-index: 999;
+     opacity: 0;
+     visibility: hidden;
+     transition: all .3s;
+}
+
+.popup:target {
+     opacity: 1;
+     visibility: visible;
+}
+
+.popup-close:link,
+.popup-close:visited {
+     display: inline-block;
+     color: #E0E2DB;
+     position: absolute;
+     top: 2rem;
+     right: 4rem;
+     font-size: 4rem;
+     text-decoration: none;
+}
+
+.popup-content {
+     width: 70%;
+     height: 50rem;
+     background-color: #E0E2DB;
+     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     border-radius: 3px;
+     overflow: hidden;
+}
+
+.popup-img {
+     display: block;
+     height: 50rem;
+     width: 100%;
+}
